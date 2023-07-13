@@ -1,0 +1,140 @@
+html {
+  scroll-behavior: smooth;
+  font-family: monospace;
+}
+
+:root {
+  --wht: #f8f8f8;
+  --blk: #28282b;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  color: var(--blk);
+  background-color: var(—wht);
+}
+
+/*************
+General styling / Elements
+**************/
+
+/*************
+Images
+**************/
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/*************
+Buttons / Links / li
+**************/
+
+a,
+button {
+  font-family: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: hotpink;
+}
+
+/*************
+Typography
+**************/
+
+.thin {
+  font-weight: 300;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+h1 {
+  color: var(--wht);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/*************
+Layout
+**************/
+
+.container {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: var(--blk);
+  padding: 1rem 0;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+}
+
+header li {
+  margin: 0 1rem;
+}
+
+/*************
+Media Queries
+**************/
+
+@media (min-width: 640px) {
+  header {
+    padding: 2rem 0;
+  }
+
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  h1 {
+    /* display: none; */
+    visibility: hidden;
+    /* margin-bottom: unset; */
+  }
+}
+
+@media (orientation: landscape) and (min-width: 400px) {
+  h1 {
+    color: hotpink;
+  }
+}
